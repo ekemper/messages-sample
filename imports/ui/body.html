@@ -1,77 +1,29 @@
 <body>
-
-  <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="#">Navbar</a>
-
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        
-      </div>
-    </nav>
-
-
-
-
-  <div class="container">
-    <!-- <header> -->
-
-    <nav class="navbar navbar-light bg-faded">
-      <h1 class="navbar-brand mb-0">Messages</h1>
-
-      <button class="btn btn-outline-primary">{{> loginButtons}}</button>
-
-    </nav>
-  </div>   
+  <nav class="navbar navbar-toggleable-md fixed-top">
+    <h1 class="navbar-brand mb-0">Messages</h1>
+    <button class="btn btn-outline-success my-2 my-sm-0">{{> loginButtons}}</button>
+  </nav>
 
   <div class="container">
     {{#if currentUser}}
-      <hr>
-      <form class="new-message">
-        <input type="text" name="text" placeholder="Type to add new message" />
-      </form>
-      <hr>
+      <div class="input-group">
+        <form class="new-message">
+          <input type="text" 
+                 class="form-control" 
+                 placeholder="new message" 
+                 aria-describedby="basic-addon1"/>
+        </form>
+      </div>
+      <br>
     {{/if}}
   </div>      
     
   <div class="container">  
     <ul class="list-group"> 
-    
       {{#each messages}}
         {{> message}}
       {{/each}}
     </ul>
-
   </div>
-</body>
 
-<!-- 
-<div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">List group item heading</h5>
-      <small>3 days ago</small>
-    </div>
-    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-    <small>Donec id elit non mi porta.</small>
-  </a>
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">List group item heading</h5>
-      <small class="text-muted">3 days ago</small>
-    </div>
-    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-    <small class="text-muted">Donec id elit non mi porta.</small>
-  </a>
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">List group item heading</h5>
-      <small class="text-muted">3 days ago</small>
-    </div>
-    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-    <small class="text-muted">Donec id elit non mi porta.</small>
-  </a>
-</div> -->
+</body>
