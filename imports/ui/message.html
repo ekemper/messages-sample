@@ -2,21 +2,24 @@
 
   <li href="#" class="list-group-item">
     
+   <div class="container">
+
       <h5>{{username}}</h5>
       <p>
-      	{{text}}
-
-        <div class="pull-right">
-          <small>{{createdAt}}</small>
-          {{#if currentUser}}
-            <button class="delete btn btn-outline-warning">&times;</button>
-          {{/if}}  
-        </div>
-      	<!-- <span>
-      	  
-        </span> -->
+      {{#if currentUser}}
+        <div class="float-md-right float-sm-right float-xs-right">
+          <button class="delete btn btn-outline-warning">&times;</button>
+        </div>  
+      {{/if}}  
       </p>
+    	<p>{{text}}</p>
 
+      <p><small><i>{{createdAt}}</i></small></p>
+
+      
+    </div>  
+      
+      
   </li>
 
 </template>

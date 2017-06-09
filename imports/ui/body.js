@@ -9,7 +9,7 @@ Template.body.helpers({
   messages() {
   	const instance = Template.instance();
     
-    return Messages.find({});//, { sort: { createdAt: -1 } });
+    return Messages.find({}, { sort: { createdAt: -1 } });
   },
 });
 
