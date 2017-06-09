@@ -1,4 +1,21 @@
 <body>
+
+  <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Navbar</a>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        
+      </div>
+    </nav>
+
+
+
+
   <div class="container">
     <!-- <header> -->
 
@@ -21,12 +38,12 @@
   </div>      
     
   <div class="container">  
-    <div class="list-group"> 
+    <ul class="list-group"> 
     
       {{#each messages}}
         {{> message}}
       {{/each}}
-    </div>
+    </ul>
 
   </div>
 </body>
