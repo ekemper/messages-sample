@@ -13,7 +13,6 @@ Template.body.helpers({
   },
 });
 
-
 Template.body.events({
   'submit .new-message'(event) {
     // Prevent default browser form submit

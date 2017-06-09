@@ -1,29 +1,29 @@
 <body>
 
-  <div class="container">
-    <nav class="navbar navbar-toggleable-md fixed-top">
-      <h1>Messages</h1>
-      <button class="btn btn-outline-success my-2 my-sm-0">{{> loginButtons}}</button>
+  
+    <nav class="navbar fixed-top navbar-light bg-faded">
+      <div class="container">
+        <h1>Messages</h1>
+        
+        <button class="btn btn-outline-success my-2 my-sm-0 ">
+          {{> loginButtons}}
+        </button>
+        
+        {{#if currentUser}}
+          <div class="input-group">
+            
+            <form class="new-message ">
+              <input class="form-control" type="text" name="text" placeholder="type a new message" />
+            </form>
+          </div>
+          <br>
+        {{/if}}
+      </div> 
     </nav>
-  </div>
+  
   
 
-  <div class="container">
-    {{#if currentUser}}
-      <div class="input-group">
-        <!-- <form class="new-message">
-          <input type="text" 
-                 class="form-control" 
-                 placeholder="new message" 
-                 aria-describedby="basic-addon1"/>
-        </form> -->
-        <form class="new-message ">
-          <input class="form-control" type="text" name="text" placeholder="type a new message" />
-        </form>
-      </div>
-      <br>
-    {{/if}}
-  </div>      
+        
     
   <div class="container">  
     <ul class="list-group"> 
