@@ -1,31 +1,60 @@
 <body>
   <div class="container">
-    <header>
-      <h1>Messages</h1>
-        <!-- <label class="hide-completed">
-          <input type="checkbox" />
-          Hide Completed Tasks
-        </label> -->
-        
+    <!-- <header> -->
 
-        <button>{{> loginButtons}}</button>
+    <nav class="navbar navbar-light bg-faded">
+      <h1 class="navbar-brand mb-0">Messages</h1>
 
+      <button class="btn btn-outline-primary">{{> loginButtons}}</button>
 
-        {{#if currentUser}}
-          <hr>
-          <form class="new-message">
-            <input type="text" name="text" placeholder="Type to add new message" />
-          </form>
-          <hr>
-        {{/if}}
+    </nav>
+  </div>   
 
-      
-    </header>
- 
-    <ul>
+  <div class="container">
+    {{#if currentUser}}
+      <hr>
+      <form class="new-message">
+        <input type="text" name="text" placeholder="Type to add new message" />
+      </form>
+      <hr>
+    {{/if}}
+  </div>      
+    
+  <div class="container">  
+    <div class="list-group"> 
+    
       {{#each messages}}
         {{> message}}
       {{/each}}
-    </ul>
+    </div>
+
   </div>
 </body>
+
+<!-- 
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+      <small>3 days ago</small>
+    </div>
+    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+    <small>Donec id elit non mi porta.</small>
+  </a>
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+      <small class="text-muted">3 days ago</small>
+    </div>
+    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+    <small class="text-muted">Donec id elit non mi porta.</small>
+  </a>
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+      <small class="text-muted">3 days ago</small>
+    </div>
+    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+    <small class="text-muted">Donec id elit non mi porta.</small>
+  </a>
+</div> -->
