@@ -27,14 +27,24 @@ Meteor.methods({
       username: Meteor.user().username,
     });
   },
-  'messages.remove'(messageId) {
-    check(messageId, String);
+  // 'messages.remove'(messageId) {
+  //   check(messageId, String);
  
-    const message = Messages.findOne(messageId);
-    if (message.owner !== Meteor.userId()) {
-      throw new Meteor.Error('not-authorized');
-    }
+  //   const message = Messages.findOne(messageId);
+  //   if (message.owner !== Meteor.userId()) {
+  //     throw new Meteor.Error('not-authorized');
+  //   }
 
-    Messages.remove(messageId);
+  //   Messages.remove(messageId);
+  // },
+});
+
+
+Messages.allow({
+  remove(userId, doc) {
+    // Can only remove your own documents.
+    return doc.owner === userId;
   },
 });
+
+
