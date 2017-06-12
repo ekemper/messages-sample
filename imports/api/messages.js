@@ -4,8 +4,6 @@ import { check } from 'meteor/check';
  
 export const Messages = new Mongo.Collection('messages');
 
-console.log('testing for activity in api/messages.js');
-
 if (Meteor.isServer) {
   // This code only runs on the server
   Meteor.publish('messages', function messagesPublication() {
@@ -40,7 +38,6 @@ Meteor.methods({
   //   Messages.remove(messageId);
   // },
 });
-
 
 Messages.allow({
   remove(userId, doc) {

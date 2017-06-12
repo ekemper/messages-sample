@@ -25,3 +25,4 @@ dburles:factory
 dispatch:mocha-browser
 practicalmeteor:chai
 hwillson:stub-collections
+johanbrook:publication-collector

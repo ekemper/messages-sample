@@ -3,8 +3,6 @@ import { Template } from 'meteor/templating';
 import { Messages } from '../../imports/api/messages.js';
 import './message.html';
 
-console.log('test for activity in client/ui/message.js');
-
 Template.message.helpers({
   isOwner() {
     return this.owner === Meteor.userId();
@@ -17,12 +15,10 @@ Template.message.helpers({
 //   },
 // });
 
-
 /*
   -- making a direct call to the serverside collection to remove a document.
   -- note the explicit 'allow' statement in ../api/messages.js
  */
-
 Template.message.events({
   'click .delete'(event) {
     event.preventDefault();
