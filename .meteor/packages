@@ -26,3 +26,6 @@ dispatch:mocha-browser
 practicalmeteor:chai
 hwillson:stub-collections
 johanbrook:publication-collector
+xolvio:cleaner
+kadira:flow-router
+kadira:blaze-layout
