@@ -4,19 +4,13 @@ import { Factory } from 'meteor/dburles:factory';
 import { chai } from 'meteor/practicalmeteor:chai';
 import { Template } from 'meteor/templating';
 import { $ } from 'meteor/jquery';
-
 import StubCollections from 'meteor/hwillson:stub-collections';
-
 import { Messages } from '../../imports/api/messages.js';
 import { withRenderedTemplate } from './test-helpers.js';
 import faker from 'faker';
 import './message.js';
 
-
-
 StubCollections.stub(Messages);
-
-
 
 Factory.define('message', Messages, {
   userId: () => faker.random.number(),
@@ -24,7 +18,6 @@ Factory.define('message', Messages, {
   createdAt: () => new Date(),
   userName:()=> faker.lorem.word()
 });
-
 
 describe('message component', function () {
   beforeEach(function () {
@@ -35,9 +28,7 @@ describe('message component', function () {
   });
   it('renders correctly with simple data', function () {
     const message = Factory.create('message');
-    // const data = {
-    //   message: Messages._transform(message)
-    // };
+    
     withRenderedTemplate('message', message, el => {
 
       var textTag = $(el).find('.message-text')[0];

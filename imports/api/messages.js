@@ -2,12 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Mongo } from 'meteor/mongo';
 import { check } from 'meteor/check';
  
-export const Messages = new Mongo.Collection('messages',{
-  transform: function(document){
-    return document;
-  }
-});
-
+export const Messages = new Mongo.Collection('messages');
 
 console.log('testing for activity in api/messages.js');
 
