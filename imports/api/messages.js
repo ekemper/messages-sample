@@ -2,7 +2,14 @@ import { Meteor } from 'meteor/meteor';
 import { Mongo } from 'meteor/mongo';
 import { check } from 'meteor/check';
  
-export const Messages = new Mongo.Collection('messages');
+export const Messages = new Mongo.Collection('messages',{
+  transform: function(document){
+    return document;
+  }
+});
+
+
+console.log('testing for activity in api/messages.js');
 
 if (Meteor.isServer) {
   // This code only runs on the server
@@ -24,7 +31,7 @@ Meteor.methods({
       text,
       createdAt: new Date(),
       owner: Meteor.userId(),
-      username: Meteor.user().username,
+      userName: Meteor.user().username,
     });
   },
   // 'messages.remove'(messageId) {

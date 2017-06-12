@@ -7,4 +7,4 @@
 // });
 
 
-import '../imports/api/messages.js';
+import { Messages } from'../imports/api/messages.js';

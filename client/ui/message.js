@@ -1,7 +1,9 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
-import { Messages } from '../api/messages.js';
+import { Messages } from '../../imports/api/messages.js';
 import './message.html';
+
+console.log('test for activity in client/ui/message.js');
 
 Template.message.helpers({
   isOwner() {
