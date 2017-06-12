@@ -34,16 +34,6 @@ if (Meteor.isClient) {
       it('has all messages at homepage', () => {
         assert.equal(Messages.find().count(), 3);
       });
-      // it('renders the correct list when routed to', () => {
-      //   const list = Lists.findOne();
-      //   FlowRouter.go('Lists.show', { _id: list._id });
-      //   return afterFlushPromise()
-      //     .then(waitForSubscriptions)
-      //     .then(() => {
-      //       assert.equal($('.title-wrapper').html(), list.name);
-      //       assert.equal(Todos.find({ listId: list._id }).count(), 3);
-      //     });
-      // });
     });
   });
 }
