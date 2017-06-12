@@ -7,7 +7,7 @@
 * the one unit test verifies that the message component is rendered correctly with simple data
 
 ## integration tests
-* run: `meteor npm test-full-app`
+* run: `meteor test --full-app --driver-package dispatch:mocha-browser`
 * the one integration test, body-message-list.app-test.js  , verifies that the correct number of messages are retreived from the messages publication
 
 
